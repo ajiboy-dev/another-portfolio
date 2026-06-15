@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en" id="html-root" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJIBOYE OLUWASEYI | Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5",
+              secondary: "#14b8a6",
+              accent: "#f59e0b",
+              surface: "#f8fafc",
+              darkBg: "#020617",
+              darkCard: "#111827",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes floatUp {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-14px);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .hero-glow {
+        animation: floatUp 6s ease-in-out infinite;
+      }
+
+      .fade-in-up {
+        animation: slideIn 0.9s ease-out both;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-darkBg dark:text-slate-100">
+    <header
+      class="sticky top-0 z-50 bg-white/90 dark:bg-slate-950/95 backdrop-blur shadow-sm"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a
+          href="#home"
+          class="text-xl font-semibold tracking-tight text-primary"
+          >AJIBOYE OLUWASEYI</a
+        >
+        <nav
+          class="hidden items-center gap-8 md:flex text-slate-700 dark:text-slate-200"
+        >
+          <a href="#about" class="hover:text-primary transition">About</a>
+          <a href="#skills" class="hover:text-primary transition"
+            >Capabilities</a
+          >
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#projects" class="hover:text-primary transition">Projects</a>
+          <a href="#cv" class="hover:text-primary transition">CV</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            id="theme-toggle"
+            class="rounded-full border border-slate-200 bg-white px-3 py-2 text-slate-700 shadow-sm transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+          >
+            <span id="sun-icon" class="hidden">☀️</span>
+            <span id="moon-icon" class="text-lg">🌙</span>
+          </button>
+          <button
+            id="mobile-menu-btn"
+            class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-700 shadow-sm transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-slate-200 bg-white/95 py-4 dark:border-slate-700 dark:bg-slate-950/95 md:hidden"
+      >
+        <div
+          class="mx-auto flex max-w-7xl flex-col gap-3 px-4 text-slate-700 dark:text-slate-200 sm:px-6 lg:px-8"
+        >
+          <a
+            href="#about"
+            class="rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >Capabilities</a
+          >
+          <a
+            href="#services"
+            class="rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >Services</a
+          >
+          <a
+            href="#projects"
+            class="rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >Projects</a
+          >
+          <a
+            href="#cv"
+            class="rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >CV</a
+          >
+          <a
+            href="#contact"
+            class="rounded-xl px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-500 dark:from-indigo-900 dark:via-purple-800 dark:to-pink-900 py-20 sm:py-28"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-white/0 blur-3xl"
+        ></div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div class="space-y-8">
+              <p class="text-sm uppercase tracking-[0.3em] text-white/80">
+                Full Stack Web Developer
+              </p>
+              <h1
+                class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl"
+              >
+                Engineering Mastery for Production-Ready Web Experiences
+              </h1>
+              <p class="max-w-2xl text-lg leading-8 text-white/90">
+                I design and build modern applications that combine clean user
+                interfaces, strong backend architecture, and reliable deployment
+                workflows. My work focuses on performance, scalability, and
+                product quality.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="#projects"
+                  class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-600 shadow-lg shadow-white/20 transition hover:bg-slate-50"
+                  >View Projects</a
+                >
+                <a
+                  href="#contact"
+                  class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20 hover:border-white"
+                  >Start a Project</a
+                >
+              </div>
+            </div>
+            <div
+              class="mx-auto w-full max-w-md rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-2xl shadow-slate-200/60 dark:border-slate-800 dark:bg-slate-900 dark:shadow-black/30"
+            >
+              <div
+                class="relative overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-primary/20 via-transparent to-secondary/20 p-4 shadow-lg"
+              >
+                <img
+                  src="./images/Snapchat-1252159438.jpg"
+                  alt="Profile"
+                  class="hero-glow h-80 w-full rounded-[1.4rem] object-cover"
+                />
+              </div>
+              <div class="mt-7 space-y-4">
+                <div>
+                  <p
+                    class="text-sm uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400"
+                  >
+                    Hi, I’m
+                  </p>
+                  <h2
+                    class="text-2xl font-semibold text-slate-950 dark:text-white"
+                  >
+                    AJIBOYE OLUWASEYI
+                  </h2>
+                </div>
+                <div class="grid gap-3 sm:grid-cols-2">
+                  <div
+                    class="rounded-3xl bg-white p-4 text-center shadow-sm dark:bg-slate-950"
+                  >
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                      Experience
+                    </p>
+                    <p
+                      class="text-xl font-semibold text-slate-900 dark:text-white"
+                    >
+                      2+ years
+                    </p>
+                  </div>
+                  <div
+                    class="rounded-3xl bg-white p-4 text-center shadow-sm dark:bg-slate-950"
+                  >
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                      Focus
+                    </p>
+                    <p
+                      class="text-xl font-semibold text-slate-900 dark:text-white"
+                    >
+                      Full-Stack
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="bg-slate-50 py-20 dark:bg-darkBg">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              About
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              Professional portfolio and product engineering for high-growth
+              businesses.
+            </h2>
+          </div>
+          <div class="grid gap-8 lg:grid-cols-2">
+            <div
+              class="space-y-6 rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <p class="text-base leading-8 text-slate-600 dark:text-slate-300">
+                I build scalable web applications with a strong focus on
+                architecture, usability, and deployment readiness. My projects
+                blend modern UI systems with secure backend APIs to deliver
+                value for product teams and clients.
+              </p>
+              <p class="text-base leading-8 text-slate-600 dark:text-slate-300">
+                I enjoy working on end-to-end solutions, from React and Next.js
+                frontends to Node.js and PHP backend systems, plus database
+                design and integration with payments, authentication, and CMS
+                workflows.
+              </p>
+            </div>
+            <div class="grid gap-6">
+              <div
+                class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+              >
+                <h3
+                  class="text-lg font-semibold text-slate-900 dark:text-white"
+                >
+                  Engineering Focus
+                </h3>
+                <ul class="mt-4 space-y-3 text-slate-600 dark:text-slate-300">
+                  <li>Production-grade frontend architecture</li>
+                  <li>Secure API and backend design</li>
+                  <li>Performance and SEO optimization</li>
+                </ul>
+              </div>
+              <div
+                class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+              >
+                <h3
+                  class="text-lg font-semibold text-slate-900 dark:text-white"
+                >
+                  What I Deliver
+                </h3>
+                <ul class="mt-4 space-y-3 text-slate-600 dark:text-slate-300">
+                  <li>Responsive UI systems and animation</li>
+                  <li>Reliable API integrations and workflows</li>
+                  <li>Deployable web products ready for production</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cv" class="bg-white py-20 dark:bg-slate-950">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              Resume
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              Download my CV and learn more about my experience.
+            </h2>
+          </div>
+          <div
+            class="rounded-3xl bg-slate-50 p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+          >
+            <p class="text-slate-600 dark:text-slate-300">
+              View my professional CV, including skills, project history, and
+              engineering impact.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-4">
+              <a
+                href="./Ajiboye_Oluwaseyi_CV.pdf"
+                target="_blank"
+                class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600"
+              >
+                View CV
+              </a>
+              <a
+                href="./resume.pdf"
+                download
+                class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+              >
+                Download CV
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              📝 Add your CV as <code>resume.pdf</code> in the project root
+              folder to enable view/download.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              Core Competencies
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              A refined stack of engineering and product capabilities.
+            </h2>
+          </div>
+          <div class="grid gap-6 xl:grid-cols-3">
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                Frontend Development
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                React, Next.js, TailwindCSS, responsive UI systems, animation,
+                component architecture.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                Backend Development
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                Node.js, Express, PHP, REST APIs, authentication, payment
+                integration, backend reliability.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                Database & Systems
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                MySQL, MongoDB, schema design, query optimization, integration,
+                caching, deployment workflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-slate-50 py-20 dark:bg-darkBg">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              What I Do
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              Services focused on product quality, security, and delivery.
+            </h2>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-3">
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                Web App Development
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                Custom enterprise and consumer applications with modern frontend
+                and backend stacks.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                SaaS & Product Systems
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                Multi-page SaaS platforms, dashboards, billing flows,
+                authentication, and UX polish.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                Brand & Product Identity
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                Professional product systems, visual identity, UI consistency,
+                and interface design.
+              </p>
+            </div>
+          </div>
+          <div class="mt-8 grid gap-6 lg:grid-cols-3">
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                SEO & Performance
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                Fast-loading pages, technical SEO, caching strategy, optimized
+                bundles, and accessibility.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                CMS & E-Commerce
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                CMS integration, product management, checkout flows, and
+                commerce automation.
+              </p>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
+                Integration & Automation
+              </h3>
+              <p class="mt-4 text-slate-600 dark:text-slate-300">
+                Payment, messaging, workflow, and system synchronization for
+                production products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cv" class="bg-slate-50 py-20 dark:bg-slate-900">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              Resume
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              Download my CV and learn more about my experience.
+            </h2>
+          </div>
+          <div
+            class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-800 dark:shadow-black/20"
+          >
+            <p class="text-slate-600 dark:text-slate-300">
+              View my professional CV, including skills, project history, and
+              engineering impact. Download the PDF to review my complete work
+              experience.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-4">
+              <a
+                href="./Ajiboye_Oluwaseyi_CV.pdf"
+                target="_blank"
+                class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600 shadow-lg shadow-primary/20"
+              >
+                📄 View CV
+              </a>
+              <a
+                href="./Ajiboye_Oluwaseyi_CV.pdf"
+                download="Ajiboye_Oluwaseyi_CV.pdf"
+                class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-primary hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+              >
+                ⬇️ Download CV
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">
+              ✓ Your CV file
+              <code class="text-primary font-semibold"
+                >Ajiboye_Oluwaseyi_CV.pdf</code
+              >
+              is ready for download.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              Production Projects
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              Featured case builds and shipped systems.
+            </h2>
+          </div>
+          <div id="projects-container" class="grid gap-6 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="bg-slate-50 py-20 dark:bg-darkBg">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              Testimonials
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              What clients say about delivery and quality.
+            </h2>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-3">
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <p class="text-slate-600 dark:text-slate-300">
+                “A dependable engineer who delivered a polished product on time.
+                The system was stable, intuitive, and production-ready.”
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div
+                  class="h-12 w-12 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
+                ></div>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white">
+                    Client Name
+                  </p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">
+                    Chief Technology Officer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <p class="text-slate-600 dark:text-slate-300">
+                “The app was built with clean architecture and thoughtful UX.
+                Delivery and communication were excellent from start to finish.”
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div
+                  class="h-12 w-12 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
+                ></div>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white">
+                    Project Lead
+                  </p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">
+                    Product Manager
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+            >
+              <p class="text-slate-600 dark:text-slate-300">
+                “Production-ready engineering, secure deployment, and strong
+                product thinking. Recommended for any serious digital product.”
+              </p>
+              <div class="mt-6 flex items-center gap-3">
+                <div
+                  class="h-12 w-12 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
+                ></div>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white">
+                    Product Owner
+                  </p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">
+                    Founder
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="mb-10 text-center">
+            <p
+              class="section-title text-sm font-semibold uppercase tracking-[0.3em] text-primary"
+            >
+              Contact
+            </p>
+            <h2
+              class="mt-4 text-3xl font-bold tracking-tight text-slate-950 dark:text-white sm:text-4xl"
+            >
+              Let’s build something valuable together.
+            </h2>
+          </div>
+          <div
+            class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:shadow-black/20"
+          >
+            <form
+              id="contact-form"
+              name="contact"
+              method="POST"
+              action="/thank-you"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              class="space-y-6"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:
+                  <input name="bot-field" />
+                </label>
+              </p>
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                  class="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                  class="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-200"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tell me about your project"
+                  class="mt-2 w-full rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                ></textarea>
+              </div>
+              <div
+                id="form-status"
+                class="hidden rounded-3xl px-4 py-3 text-center text-sm font-medium"
+                aria-live="polite"
+              ></div>
+              <button
+                id="submit-button"
+                type="submit"
+                class="inline-flex w-full items-center justify-center rounded-3xl bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="border-t border-slate-200 bg-white py-10 dark:border-slate-800 dark:bg-slate-950"
+    >
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
+        >
+          <p class="text-sm text-slate-600 dark:text-slate-400">
+            © <span id="current-year"></span> AJIBOYE OLUWASEYI. Built for
+            production-ready systems.
+          </p>
+          <div
+            class="flex flex-wrap items-center gap-4 text-slate-600 dark:text-slate-400"
+          >
+            <a
+              id="github-profile-link"
+              href="#"
+              target="_blank"
+              class="hover:text-primary transition"
+              >GitHub</a
+            >
+            <a href="#" target="_blank" class="hover:text-primary transition"
+              >LinkedIn</a
+            >
+            <a href="#" target="_blank" class="hover:text-primary transition"
+              >Behance</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // TODO: set this to your GitHub username (e.g. "octocat") to auto-load projects
+      const githubUsername = "ajiboy-dev";
+      const githubProfileLink = document.getElementById("github-profile-link");
+      if (githubProfileLink)
+        githubProfileLink.href = githubUsername
+          ? `https://github.com/${githubUsername}`
+          : "#";
+
+      const projectsContainer = document.getElementById("projects-container");
+      const defaultProjects = [
+        {
+          name: "Project One",
+          description:
+            "A production-grade platform built with modern frontend and backend systems.",
+          url: "#",
+          liveUrl: "#",
+          language: "Full Stack",
+        },
+        {
+          name: "Project Two",
+          description:
+            "A responsive application with secure API integration and polished UI.",
+          url: "#",
+          liveUrl: "#",
+          language: "Web App",
+        },
+        {
+          name: "Project Three",
+          description:
+            "A scalable product system with optimized performance and workflow automation.",
+          url: "#",
+          liveUrl: "#",
+          language: "Platform",
+        },
+      ];
+
+      function renderProjectCards(repos) {
+        const items = repos && repos.length ? repos : defaultProjects;
+        projectsContainer.innerHTML = items
+          .map(
+            (repo) => `
+            <article class="rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/50 transition hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900 dark:shadow-black/20">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-950 dark:text-white">${repo.name}</h3>
+                  <p class="mt-3 text-slate-600 dark:text-slate-300">${repo.description}</p>
+                </div>
+                <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">${repo.language}</span>
+              </div>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <a href="${repo.url}" target="_blank" class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-600">View Code</a>
+                ${repo.liveUrl ? `<a href="${repo.liveUrl}" target="_blank" class="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-100">Live Demo</a>` : ""}
+              </div>
+            </article>
+          `,
+          )
+          .join("");
+      }
+
+      async function loadGithubProjects() {
+        if (!githubUsername || githubUsername === "YOUR_GITHUB_USERNAME") {
+          renderProjectCards(defaultProjects);
+          return;
+        }
+
+        projectsContainer.innerHTML = `<div class="col-span-full rounded-3xl bg-white p-10 text-center text-slate-600 shadow-xl shadow-slate-200/50 dark:bg-slate-900 dark:text-slate-300">Loading GitHub projects...</div>`;
+
+        try {
+          const response = await fetch(
+            `https://api.github.com/users/${githubUsername}/repos?per_page=12&sort=updated`,
+          );
+          if (!response.ok) throw new Error("GitHub API error");
+          const repos = await response.json();
+          const filtered = repos.filter((repo) => !repo.fork).slice(0, 6);
+          if (filtered.length === 0) {
+            renderProjectCards(defaultProjects);
+            return;
+          }
+          const mapped = filtered.map((repo) => ({
+            name: repo.name,
+            description: repo.description || "No description available.",
+            url: repo.html_url,
+            liveUrl: repo.homepage || repo.html_url,
+            language: repo.language || "Web",
+          }));
+          renderProjectCards(mapped);
+        } catch (error) {
+          console.error(error);
+          renderProjectCards(defaultProjects);
+        }
+      }
+
+      const htmlRoot = document.getElementById("html-root");
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const sunIcon = document.getElementById("sun-icon");
+      const moonIcon = document.getElementById("moon-icon");
+
+      function updateThemeIcons(isDark) {
+        sunIcon.classList.toggle("hidden", !isDark);
+        moonIcon.classList.toggle("hidden", isDark);
+      }
+
+      function applyTheme(theme) {
+        const isDark = theme === "dark";
+        if (isDark) {
+          htmlRoot.classList.add("dark");
+        } else {
+          htmlRoot.classList.remove("dark");
+        }
+        updateThemeIcons(isDark);
+        localStorage.setItem("theme", theme);
+      }
+
+      function initializeTheme() {
+        const saved = localStorage.getItem("theme");
+        const system = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        applyTheme(saved || system);
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+        applyTheme(htmlRoot.classList.contains("dark") ? "light" : "dark");
+      });
+
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          if (this.getAttribute("href").length > 1) {
+            e.preventDefault();
+            document
+              .querySelector(this.getAttribute("href"))
+              .scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // Netlify form submission is handled by Netlify when deployed. The form action points to /thank-you.
+
+      initializeTheme();
+      loadGithubProjects();
+    </script>
+  </body>
+</html>
