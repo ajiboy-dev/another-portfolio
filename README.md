@@ -1,226 +1,61 @@
 # AJIBOYE OLUWASEYI | Software Developer Portfolio
 
-A professional, production-ready portfolio website built with pure HTML, CSS (Tailwind), and JavaScript. Zero backend required.
+A personal portfolio website presenting my work, experience, skills, and ways to get in touch. Built as a static, responsive site with a lightweight frontend and no application server requirement.
 
-## ✨ Features
+## About this project
 
-- **Fully Static** - No backend server needed
-- **Mobile Responsive** - Works on all devices
-- **Dark Mode** - System preference detection + manual toggle
-- **Serverless Forms** - Netlify Forms handles contact submissions
-- **GitHub Integration** - Auto-loads your projects from GitHub
-- **PDF Resume** - Direct download & view functionality
-- **SEO Optimized** - Meta tags, semantic HTML
-- **Performance** - Fast loading, optimized assets
-- **Professional Gradient** - Beautiful hero section with premium UI
+This repository contains one of my portfolio website implementations. It combines a professional landing page with project discovery, resume access, and a contact experience. The project is designed to make it easy for visitors and recruiters to understand my work and explore selected repositories.
 
-## 🚀 Quick Setup
+## Highlights
 
-### 1. Local Development
+- Responsive layout for desktop and mobile screens
+- Dark mode with system preference support and a manual toggle
+- Project section that reads public repository information from the GitHub API
+- Resume view and download links
+- Contact form configured for Netlify Forms
+- Semantic HTML and search-oriented metadata
+
+## Screenshots
+
+There are no dedicated screenshots in the repository at present. Add authentic captures under `docs/screenshots/` and link them here when ready.
+
+## Technology
+
+- HTML
+- CSS, including Tailwind utility styles
+- JavaScript
+- GitHub REST API for public repository data
+- Netlify Forms for deployed contact submissions
+
+## Run locally
+
+Install dependencies and start the local development server:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Opens at `http://localhost:3000`
+Open the local address printed by the development server.
 
-### 2. Personalization
+## Personalization
 
-**Update your profile:**
+Before using this project as a template, review and update:
 
-- Edit name, bio in `index.html` lines 66-90
-- Replace profile image: `./images/Snapchat-1252159438.jpg`
-- Update GitHub username: Line 941 `const githubUsername = "ajiboy-dev"`
-- Update social links in footer: Lines 930-936
+- Name, introduction, and profile image in `index.html`
+- GitHub username and social links
+- Resume PDF and its links
+- Contact form settings for the intended host
+- Repository links and project descriptions
 
-**Add your CV:**
+## Deployment
 
-- Place your PDF in root folder and name it `Ajiboye_Oluwaseyi_CV.pdf`
-- The CV section (line 558) already links to this file
-- View and download buttons will work once deployed
+The project includes Netlify configuration. Netlify is the intended host for the contact form integration; that form will not submit through Netlify Forms when hosted elsewhere without replacing it with a compatible service. Review the provider settings and the repository configuration before deploying.
 
-## 📋 How Your GitHub Projects Load
+## Notes
 
-The portfolio automatically fetches your GitHub repositories:
+The repository currently includes a `node_modules/` directory. For a cleaner, reproducible project, dependencies should generally be installed from the package manifest rather than committed with the application source.
 
-1. Your GitHub username is set to `ajiboy-dev`
-2. On page load, it queries the GitHub API: `https://api.github.com/users/ajiboy-dev/repos`
-3. Filters out forks and displays your top 6 repos (by update time)
-4. For each repo, it shows:
-   - Name & description (from GitHub)
-   - Language (from GitHub)
-   - Links to code and homepage (if set)
+## Author
 
-**To add project details:**
-
-- Add descriptions to your GitHub repos
-- Set a homepage URL in repo settings for "Live Demo" buttons
-- Repos will update automatically when deployed
-
-## ✅ No Backend Required
-
-This is a **fully static portfolio**:
-
-- ✅ HTML + CSS (Tailwind) + JavaScript only
-- ✅ Contact form handled by Netlify Forms (serverless)
-- ✅ GitHub API fetches projects (read-only)
-- ✅ Form submissions redirect to `thanks.html`
-- ✅ Zero server maintenance needed
-
-## 🌐 Deployment Guide
-
-### Option 1: Netlify (Recommended) ✨
-
-1. **Create account:** https://netlify.com
-2. **Connect repository:**
-   - Click "Add new site" → "Import an existing project"
-   - Connect your GitHub repo
-   - Base directory: `new-portfolio`
-   - Deploy!
-3. **Enable Netlify Forms:**
-   - Go to Site settings → Forms
-   - Forms are auto-detected and enabled
-4. **Custom Domain:**
-   - Settings → Domain management → Add custom domain
-
-**Result:** Your contact form will capture submissions, CV download works, GitHub projects auto-load.
-
-### Option 2: Vercel
-
-1. Create account: https://vercel.com
-2. Click "New Project" → Import your repo
-3. Root directory: `new-portfolio`
-4. Deploy!
-
-**Note:** Contact form won't work on Vercel (it uses Netlify Forms). You'd need to use Vercel's form integration or switch to Netlify.
-
-### Option 3: GitHub Pages
-
-1. Push code to GitHub
-2. Go to Settings → Pages
-3. Set source to `main` branch, folder `/new-portfolio`
-4. GitHub will provide your live URL
-
-**Note:** GitHub Pages won't handle contact form submissions.
-
-## 📝 Resume/CV Section
-
-**Why your resume might not be showing:**
-
-✅ **Fixed in this update:**
-
-- Added complete CV section with View & Download buttons
-- Links to `Ajiboye_Oluwaseyi_CV.pdf` (your current file)
-- Works on all domains (Netlify, Vercel, local)
-
-**To enable:**
-
-1. Your file `Ajiboye_Oluwaseyi_CV.pdf` is already in the root folder ✓
-2. CV section is now in the HTML (line 558) ✓
-3. When deployed, users can click "View CV" or "Download CV"
-4. On local: Use `npm run dev` to test the links
-
-## 🎨 What I Changed
-
-### 1. Hero Section Gradient
-
-- **Before:** `from-slate-900 via-slate-800 to-primary/80` (gray)
-- **After:** `from-indigo-600 via-purple-500 to-pink-500` (vibrant professional gradient)
-- Button styles updated to white with shadow
-- Text now white for contrast on colorful background
-
-### 2. CV Section Added
-
-- New section between projects and testimonials
-- Direct link to `Ajiboye_Oluwaseyi_CV.pdf`
-- View & Download buttons
-- Mobile responsive
-- Dark mode support
-
-### 3. Enhanced netlify.toml
-
-- Added build command
-- PDF caching headers
-- Image optimization headers
-- Security headers (X-Content-Type-Options, etc.)
-- SPA routing redirect
-- Proper framework detection
-
-## 📋 Pre-Deployment Checklist
-
-- [ ] Updated name & bio in HTML
-- [ ] Replaced profile image with your photo
-- [ ] Added GitHub username
-- [ ] CV file `Ajiboye_Oluwaseyi_CV.pdf` is in root folder
-- [ ] Updated social links (GitHub, LinkedIn, portfolio)
-- [ ] Tested locally with `npm run dev`
-- [ ] Verified CV downloads/views locally
-- [ ] Updated project descriptions on GitHub
-- [ ] Added homepage URLs to repos (for live demo links)
-
-## 🔗 Production URLs
-
-Once deployed, your portfolio will be accessible at:
-
-- **Netlify:** `your-name.netlify.app`
-- **Vercel:** `your-name.vercel.app`
-- **GitHub Pages:** `username.github.io` or `username.github.io/new-portfolio`
-- **Custom Domain:** Your own domain (configure in hosting provider)
-
-## 📧 Contact Form
-
-When deployed to Netlify:
-
-- Submissions go to your email
-- Configure at Netlify dashboard → Site settings → Forms
-- Users redirected to `thanks.html` after submit
-- Spam protection via honeypot field
-
-## 🐛 Troubleshooting
-
-| Issue                            | Solution                                                                         |
-| -------------------------------- | -------------------------------------------------------------------------------- |
-| CV won't download locally        | Use `npm run dev` (file:// protocol doesn't allow downloads)                     |
-| GitHub projects not showing      | Check: (1) Username in line 941, (2) API rate limits (60 req/hr unauthenticated) |
-| Contact form not working locally | This is expected - works only when deployed to Netlify                           |
-| Dark mode not saving             | Check localStorage in browser DevTools                                           |
-| Images not loading               | Verify image paths start with `./`                                               |
-
-## 🎯 Next Steps
-
-1. **Test locally:**
-
-   ```bash
-   npm run dev
-   ```
-
-2. **Deploy to Netlify:**
-   - Push to GitHub
-   - Connect repo to Netlify
-   - Deploy!
-
-3. **Verify everything works:**
-   - [ ] Hero section displays with gradient
-   - [ ] CV links work
-   - [ ] GitHub projects load
-   - [ ] Contact form submits
-   - [ ] Mobile responsive
-   - [ ] Dark/light mode toggle works
-
-## 📚 Resources
-
-- [Tailwind CSS Docs](https://tailwindcss.com)
-- [Netlify Forms Docs](https://docs.netlify.com/forms/setup/)
-- [GitHub API Docs](https://docs.github.com/en/rest)
-- [Netlify Deployment Guide](https://docs.netlify.com/get-started/)
-
-## 📄 License
-
-Personal portfolio project. Feel free to customize and deploy.
-
----
-
-**Status:** ✅ Ready for deployment
-
-**Last Updated:** June 2026
+**Ajiboye Oluwaseyi** · [GitHub](https://github.com/ajiboy-dev)
